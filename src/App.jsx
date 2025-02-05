@@ -36,7 +36,7 @@ const Header = () => {
     <header className="header">
       <h1>Nexus Movies</h1>
       <button onClick={toggleTheme} className="theme-toggle">
-        {theme === 'light' ? <i className="fas fa-moon"></i> : <i className="fas fa-sun"></i>}
+        {theme === 'light' ? <i className=""></i> : <i className=""></i>}
       </button>
     </header>
   );
