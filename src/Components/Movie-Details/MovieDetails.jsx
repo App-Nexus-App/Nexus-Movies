@@ -5,9 +5,8 @@ import './MovieDetails.css';
 
 const MovieDetails = () => {
   const { id } = useParams();
-  const { setQuery, query } = useGlobalContext();
+  const { query, setQuery } = useGlobalContext();
   const navigate = useNavigate();
-
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
   const [trailer, setTrailer] = useState(null);
