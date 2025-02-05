@@ -14,35 +14,43 @@ const MovieDetails = () => {
   const [actorMovies, setActorMovies] = useState([]); // Suggested movies by actors
 
   const API_KEY = '5017776348012e3d35b87f7c927200a4';
+
   useEffect(() => {
     const fetchMovieDetails = async () => {
-      if (searchQuery) {
-        setQuery(searchQuery);
-      }
       try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=5017776348012e3d35b87f7c927200a4`
-        );
+        // Fetch movie details
+        const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
+        if (!movieResponse.ok) throw new Error("Failed to fetch movie details");
+        const movieData = await movieResponse.json();
+        setMovie(movieData);
 
-        if (!response.ok) throw new Error("Failed to fetch movie details");
-
-        const data = await response.json();
-        setMovie(data);
-
-        const trailerResponse = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=5017776348012e3d35b87f7c927200a4`
-        );
-
-        if (!trailerResponse.ok) throw new Error("Failed to fetch trailer");
-
+        // Fetch trailer
+        const trailerResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`);
         const trailerData = await trailerResponse.json();
         const officialTrailer = trailerData.results.find(
           (video) => video.type === 'Trailer' && video.site === 'YouTube'
         );
-
         if (officialTrailer) {
           setTrailer(`https://www.youtube.com/embed/${officialTrailer.key}`);
         }
+
+        // Fetch movies with the same actors
+        const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`);
+        const creditsData = await creditsResponse.json();
+        const topActors = creditsData.cast.slice(0, 3); // Pick top 3 actors
+
+        let actorMoviesData = [];
+        for (const actor of topActors) {
+          const actorMoviesResponse = await fetch(
+            `https://api.themoviedb.org/3/person/${actor.id}/movie_credits?api_key=${API_KEY}`
+          );
+          const actorMovies = await actorMoviesResponse.json();
+          actorMoviesData = [...actorMoviesData, ...actorMovies.cast];
+        }
+
+        // Remove duplicates and filter out the current movie
+        const uniqueMovies = Array.from(new Map(actorMoviesData.map(movie => [movie.id, movie])).values());
+        setActorMovies(uniqueMovies.filter(m => m.id !== Number(id)).slice(0, 6));
 
         setLoading(false);
       } catch (error) {
@@ -52,28 +60,10 @@ const MovieDetails = () => {
     };
 
     fetchMovieDetails();
-  }, [id, searchQuery, setQuery]);
+  }, [id]);
 
-  const handleBackToSearchResults = () => {
-    if (query) {
-      navigate(`/search/${query}`);
-    } else {
-      navigate('/');
-    }
-  };
-
-  const handleBackToHome = () => {
-    setQuery("");
-    navigate('/');
-  };
-
-  if (loading) {
-    return <p>Loading movie details...</p>;
-  }
-
-  if (!movie) {
-    return <p>Movie not found.</p>;
-  }
+  if (loading) return <p>Loading movie details...</p>;
+  if (!movie) return <p>Movie not found.</p>;
 
   return (
     <div className="movie-details">
