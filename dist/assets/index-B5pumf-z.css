@@ -233,6 +233,8 @@ button:focus-visible {
     background-color: #333;
     color: #fff;
     font-size: 16px;
+    background-color: rgba(82, 157, 167, .3);
+    color: black;
     border: 2px solid #ccc;
     border-color: #007bff;
     border-radius: 25px;
