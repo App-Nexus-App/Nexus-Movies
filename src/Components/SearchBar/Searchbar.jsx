@@ -8,18 +8,9 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   const [genres, setGenres] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
-  
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (selectedGenre) {
-      navigate(`/search/${selectedGenre || searchTerm}`);
-    } else if (searchTerm.trim()) {
-      navigate(`/search/${searchTerm}`);
-    }
-  };
 
   useEffect(() => {
     const fetchGenres = async () => {
@@ -39,11 +30,27 @@ const SearchBar = () => {
   }, []);
 
   useEffect(() => {
-    if (location.pathname === '/') {
-      setSearchTerm('');
-      setSelectedGenre('');
+    if (searchTerm.length < 2) {
+      setSuggestions([]);
+      return;
     }
-  }, [location]);
+
+    const fetchSuggestions = async () => {
+      try {
+        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=5017776348012e3d35b87f7c927200a4&query=${searchTerm}`);
+        const data = await response.json();
+        if (data.results) {
+          setSuggestions(data.results.slice(0, 5)); // Show top 5 suggestions
+        } else {
+          setSuggestions([]);
+        }
+      } catch (error) {
+        console.error('Error fetching movie suggestions:', error);
+      }
+    };
+
+    fetchSuggestions();
+  }, [searchTerm]);
 
   useEffect(() => {
     if(selectedGenre) {
@@ -51,6 +58,22 @@ const SearchBar = () => {
       setTimeout(() => setSelectedGenre (''), 200);
     };
   }, [selectedGenre, navigate]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (selectedGenre) {
+      navigate(`/search/${selectedGenre}`);
+    } else if (searchTerm.trim()) {
+      navigate(`/search/${searchTerm}`);
+    }
+    setSuggestions([]);
+  };
+
+  const handleSuggestionClick = (movie) => {
+    navigate(`/movie/${movie.id}`);
+    setSearchTerm('');
+    setSuggestions([]);
+  };
 
   return (
     <section className="search-section">
@@ -64,7 +87,17 @@ const SearchBar = () => {
               onChange={(e) => setSearchTerm(e.target.value)} 
             />
             <button type="submit" className="search-button">🔍</button>
+            {suggestions.length > 0 && (
+              <ul className="autocomplete-list">
+                {suggestions.map(movie => (
+                  <li key={movie.id} onClick={() => handleSuggestionClick(movie)}>
+                    {movie.title}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
+          
           <select 
             className="genre-dropdown" 
             value={selectedGenre} 
