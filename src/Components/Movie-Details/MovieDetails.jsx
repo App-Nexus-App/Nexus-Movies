@@ -5,7 +5,7 @@ import './MovieDetails.css';
 
 const MovieDetails = () => {
   const { id } = useParams();
-  const { query, setQuery } = useGlobalContext();
+  const { setQuery, query } = useGlobalContext();
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -33,7 +33,7 @@ const MovieDetails = () => {
 
         const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`);
         const creditsData = await creditsResponse.json();
-        const topActors = creditsData.cast.slice(0, 3); // Pick top 3 actors
+        const topActors = creditsData.cast.slice(0, 3);
 
         let actorMoviesData = [];
         for (const actor of topActors) {

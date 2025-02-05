@@ -40,7 +40,7 @@ const SearchBar = () => {
         const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=5017776348012e3d35b87f7c927200a4&query=${searchTerm}`);
         const data = await response.json();
         if (data.results) {
-          setSuggestions(data.results.slice(0, 5)); // Show top 5 suggestions
+          setSuggestions(data.results.slice(0, 5));
         } else {
           setSuggestions([]);
         }
