@@ -20,7 +20,7 @@ const MovieGrid = () => {
               alt={movie.title}
             />
           </Link>
-          <h2>
+          <h2 className="title">
             <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
           </h2>
         </div>

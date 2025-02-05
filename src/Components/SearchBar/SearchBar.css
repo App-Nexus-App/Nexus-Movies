@@ -135,8 +135,8 @@
   will-change: transform;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #437e79;
-  background-color: rgba(215, 246, 250, 0.3);
+  /* border: 1px solid #437e79;
+  background-color: rgba(215, 246, 250, 0.3); */
 }
 
 .movie-card:hover {
@@ -165,7 +165,7 @@
 
 .movie-card a:hover {
   color: #f03514;
-  background-color: rgba(32, 139, 64, 0.3);
+  
 }
 
 /* Responsive Adjustments */
