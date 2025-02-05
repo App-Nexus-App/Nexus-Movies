@@ -129,3 +129,9 @@ body {
    transform: scale(1.02);
    transition: transform 0.3s ease;
 }
+.suggested-movies {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+}
