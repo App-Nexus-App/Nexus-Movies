@@ -108,6 +108,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  margin-left: 10px;
   transition: background 0.3s, color 0.3s;
 }
  .back-button:hover {
