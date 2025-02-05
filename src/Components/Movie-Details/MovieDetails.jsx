@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useGlobalContext } from '../../MovieContext';
 import './MovieDetails.css';
 
 const MovieDetails = () => {
   const { id } = useParams();
   const { setQuery, query } = useGlobalContext();
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const searchQuery = params.get("query");
   const navigate = useNavigate();
+
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
   const [trailer, setTrailer] = useState(null);
+  const [actorMovies, setActorMovies] = useState([]);
+
+  const API_KEY = '5017776348012e3d35b87f7c927200a4';
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
