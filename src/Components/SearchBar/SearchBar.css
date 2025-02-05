@@ -61,7 +61,11 @@
   background-color: #333;
   color: #fff;
   font-size: 16px;
+<<<<<<<<< Temporary merge branch 1
   background-color: rgba(82, 157, 167, 0.3);
+=========
+  background-color:  rgba(82, 157, 167, 0.3);
+>>>>>>>>> Temporary merge branch 2
   color: black;
   border: 2px solid #ccc;
   border-color: #007bff; 
