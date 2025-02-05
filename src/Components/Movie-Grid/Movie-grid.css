@@ -33,9 +33,7 @@
   color: black;
   font-weight: bold;
   padding: 6px 10px;
-  
   border-radius: 5px;
-  
 }
   .movie-card a:hover {
     color: #f03514; 
