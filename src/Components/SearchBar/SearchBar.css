@@ -61,7 +61,6 @@
   background-color: #333;
   color: #fff;
   font-size: 16px;
-
   background-color: rgba(82, 157, 167, 0.3);
   color: black;
   border: 2px solid #ccc;
@@ -94,7 +93,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #202020;
+  background-color: black ;
   border: 1px solid #ccc;
   border-top: none;
   align-items: self-start;
@@ -110,10 +109,11 @@
 .search-input-wrapper .autocomplete-list li {
   padding: 10px;
   cursor: pointer;
+  
 }
 
 .search-input-wrapper .autocomplete-list li:hover {
-  background-color: #202020;
+    background-color:  #00a6fb;
 }
 
 /* Movie grid styles */
