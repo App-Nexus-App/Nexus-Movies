@@ -69,48 +69,49 @@ const MovieDetails = () => {
     <div className="movie-details">
       <div className="buttons">
         {query && (
-          <button onClick={handleBackToSearchResults} className="back-button">
+          <button onClick={() => navigate(`/search/${query}`)} className="back-button">
             ⬅ Back to Search Results
           </button>
         )}
-        <button onClick={handleBackToHome} className="home-button">
+        <button onClick={() => navigate('/')} className="home-button">
           🏠 Back to Home
         </button>
       </div>
 
-      {/* YouTube Trailer */}
-      {trailer ? (
+      {/* Movie Trailer */}
+      {trailer && (
         <div className="trailer">
           <h3>🎬 Watch Trailer</h3>
-          <iframe
-            width="560"
-            height="315"
-            src={trailer}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <iframe width="560" height="315" src={trailer} title="Trailer" frameBorder="0" allowFullScreen></iframe>
         </div>
-      ) : (
-        <p>No trailer available.</p>
       )}
 
-      {/* Main Content (Image & Details) */}
+      {/* Main Movie Details */}
       <div className="movie-container">
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}
-        />
+        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
         <div className="movie-content">
           <h2>{movie.title}</h2>
-          <p><strong>Description: </strong>{movie.overview}</p>
-          <p className="rating"><strong>IMDb Ratings⭐ :</strong>  {movie.vote_average.toFixed(1)}/10</p>
-          <p className="release-date"> <strong>Release Date📅 :</strong>  {movie.release_date}</p>
+          <p><strong>Description:</strong> {movie.overview}</p>
+          <p className="rating"><strong>IMDb Ratings⭐:</strong> {movie.vote_average.toFixed(1)}/10</p>
+          <p className="release-date"><strong>Release Date📅:</strong> {movie.release_date}</p>
         </div>
       </div>
 
-      
+      {/* Suggested Movies by Same Actors */}
+      {actorMovies.length > 0 && (
+        <div className="suggested-movies">
+          <h3>🎭 More Movies with the Same Actors</h3>
+          <div className="movies-grid">
+            {actorMovies.map((movie) => (
+              <div key={movie.id} className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
+                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                <h4>{movie.title}</h4>
+                <p>⭐ {movie.vote_average.toFixed(1)}/10</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
