@@ -47,12 +47,12 @@
 
 
 
-=======
+
   .movie-card a:hover {
     color: #f03514;
     background-color: rgba(32, 139, 64, 0.3);
   }
->>>>>>> 3aae818de2407034b129350760fc3483ecdb952c
+
 
   /* Responsive Adjustments */
   @media (max-width: 1024px) {
