@@ -11,10 +11,9 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
   const [trailer, setTrailer] = useState(null);
-  const [actorMovies, setActorMovies] = useState([]);
+  const [actorMovies, setActorMovies] = useState([]); // Suggested movies by actors
 
   const API_KEY = '5017776348012e3d35b87f7c927200a4';
-
   useEffect(() => {
     const fetchMovieDetails = async () => {
       if (searchQuery) {
