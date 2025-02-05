@@ -11,20 +11,18 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
   const [trailer, setTrailer] = useState(null);
-  const [actorMovies, setActorMovies] = useState([]); // Suggested movies by actors
+  const [actorMovies, setActorMovies] = useState([]);
 
   const API_KEY = '5017776348012e3d35b87f7c927200a4';
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        // Fetch movie details
         const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
         if (!movieResponse.ok) throw new Error("Failed to fetch movie details");
         const movieData = await movieResponse.json();
         setMovie(movieData);
 
-        // Fetch trailer
         const trailerResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`);
         const trailerData = await trailerResponse.json();
         const officialTrailer = trailerData.results.find(
@@ -34,7 +32,6 @@ const MovieDetails = () => {
           setTrailer(`https://www.youtube.com/embed/${officialTrailer.key}`);
         }
 
-        // Fetch movies with the same actors
         const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`);
         const creditsData = await creditsResponse.json();
         const topActors = creditsData.cast.slice(0, 3); // Pick top 3 actors
@@ -48,7 +45,6 @@ const MovieDetails = () => {
           actorMoviesData = [...actorMoviesData, ...actorMovies.cast];
         }
 
-        // Remove duplicates and filter out the current movie
         const uniqueMovies = Array.from(new Map(actorMoviesData.map(movie => [movie.id, movie])).values());
         setActorMovies(uniqueMovies.filter(m => m.id !== Number(id)).slice(0, 6));
 
@@ -78,7 +74,6 @@ const MovieDetails = () => {
         </button>
       </div>
 
-      {/* Movie Trailer */}
       {trailer && (
         <div className="trailer">
           <h3>🎬 Watch Trailer</h3>
@@ -86,7 +81,6 @@ const MovieDetails = () => {
         </div>
       )}
 
-      {/* Main Movie Details */}
       <div className="movie-container">
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
         <div className="movie-content">
@@ -97,7 +91,6 @@ const MovieDetails = () => {
         </div>
       </div>
 
-      {/* Suggested Movies by Same Actors */}
       {actorMovies.length > 0 && (
         <div className="suggested-movies">
           <h3>🎭 More Movies with the Same Actors</h3>
