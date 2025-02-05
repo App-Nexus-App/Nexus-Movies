@@ -61,6 +61,7 @@
   background-color: #333;
   color: #fff;
   font-size: 16px;
+
   background-color: rgba(82, 157, 167, 0.3);
   color: black;
   border: 2px solid #ccc;
@@ -87,13 +88,12 @@
   cursor: pointer;
 }
 
-/* New styles for suggestions dropdown */
 .search-input-wrapper .autocomplete-list {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background-color: black;
+  background-color: black ;
   border: 1px solid #ccc;
   border-top: none;
   max-height: 200px;
@@ -102,21 +102,20 @@
   border-radius: 10px;
   padding: 0;
   margin: 0;
-  z-index: 1000; /* Ensure this is higher than the movie grid */
+  z-index: 1000;
 }
 
 .search-input-wrapper .autocomplete-list li {
   padding: 10px;
   cursor: pointer;
-  text-align: left; /* Align text to the left */
-  color: white; /* Ensure text is visible on black background */
+  
 }
 
 .search-input-wrapper .autocomplete-list li:hover {
-    background-color:  #00a6fb;
+  background-color: #202020;
 }
 
-/* Movie grid styles */
+
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -124,8 +123,8 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; /* Ensure it has a position property */
-  z-index: 500; /* Lower than the suggestions dropdown */
+  position: relative;
+  z-index: 500;
 }
 
 .movie-card {
@@ -135,8 +134,7 @@
   will-change: transform;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #437e79;
-  background-color: rgba(215, 246, 250, 0.3);
+  
 }
 
 .movie-card:hover {
@@ -165,10 +163,10 @@
 
 .movie-card a:hover {
   color: #f03514;
-  background-color: rgba(32, 139, 64, 0.3);
+  
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 1024px) {
   .movies-grid {
     grid-template-columns: repeat(3, 1fr);
