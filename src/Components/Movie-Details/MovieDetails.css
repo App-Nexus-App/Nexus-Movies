@@ -82,40 +82,34 @@ body {
  
  .trailer iframe {
    width: 100%;
-   max-width: 900px;
-   height: 450px;
+   max-width: 560px;
    border-radius: 10px;
    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
  }
  
- /* Buttons */
-.buttons {
-  display: flex;
-  justify-content: center;
+ .back-button {
+   display: inline-block;
+   margin-bottom: 20px;
+   padding: 10px 15px;
+   background: linear-gradient(45deg, #000000, #2575fc);
+   color: #C0C0C0;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s, color 0.3s;
+ }
+ 
+ .home-button {
+  display: inline-block;
   margin-bottom: 20px;
-  
-}
-
-.home-button{
-  margin-left: 500px;
-}
-
-.back-button, .home-button {
   padding: 10px 15px;
   background: linear-gradient(45deg, #000000, #2575fc);
   color: #C0C0C0;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  border: none;
-  cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
-
-.back-button:hover, .home-button:hover {
-  background: linear-gradient(45deg, #111111, #1b5ed6);
-}
-
  .back-button:hover {
    background:linear-gradient(45deg, #111111, #1b5ed6);
  }

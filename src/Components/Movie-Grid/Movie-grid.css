@@ -33,7 +33,7 @@
 }
 
 
-.movie-card h2 a {
+.movie-card h2 {
   text-decoration: none;
   color: #fbfbfc;
   font-weight: bold;
@@ -46,10 +46,10 @@
 }
 
 
-  .movie-card a:hover {
+  /* .movie-card a:hover {
     color: #fdfdfd;
     background-color: rgb(32, 139, 64);
-  }
+  } */
 
   /* Responsive Adjustments */
   @media (max-width: 1024px) {

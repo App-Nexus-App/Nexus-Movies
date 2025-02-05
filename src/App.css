@@ -1,21 +1,10 @@
-/* #root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-image: url('/src/assets/50+\ Best\ Dark\ Blue\ iPhone\ Wallpapers\ 2024\ \(Free\ 4k\ HD\ Download\).jpg');
-  background-color: gray;
-  background-position: center;
-  background-size: cover;
-  align-items: center;
-  justify-content: center;
 }
+
 
 .header h1 {
   align-items: center;
@@ -26,13 +15,6 @@
 .app {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.movies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
   padding: 20px;
 }
 
