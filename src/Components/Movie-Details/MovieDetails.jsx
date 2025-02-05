@@ -116,7 +116,7 @@ const MovieDetails = () => {
         <div className="movie-content">
           <h2>{movie.title}</h2>
           <p><strong>Description: </strong>{movie.overview}</p>
-          <p className="rating"><strong>IMBD Ratings⭐ :</strong>  {movie.vote_average.toFixed(1)}/10</p>
+          <p className="rating"><strong>IMDb Ratings⭐ :</strong>  {movie.vote_average.toFixed(1)}/10</p>
           <p className="release-date"> <strong>Release Date📅 :</strong>  {movie.release_date}</p>
         </div>
       </div>
