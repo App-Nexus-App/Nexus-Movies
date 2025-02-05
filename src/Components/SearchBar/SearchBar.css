@@ -93,10 +93,9 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: black ;
+  background-color: black;
   border: 1px solid #ccc;
   border-top: none;
-  align-items: self-start;
   max-height: 200px;
   overflow-y: auto;
   list-style: none;
@@ -109,7 +108,8 @@
 .search-input-wrapper .autocomplete-list li {
   padding: 10px;
   cursor: pointer;
-  
+  text-align: left; /* Align text to the left */
+  color: white; /* Ensure text is visible on black background */
 }
 
 .search-input-wrapper .autocomplete-list li:hover {
