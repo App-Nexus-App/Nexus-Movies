@@ -42,13 +42,13 @@
   transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   border: 0px solid #437e79;
   border-radius: 5px;
-  background-color: rgba(82, 157, 167, 0.3);
+  background-color: rgba(82, 157, 167, 1);
 }
 
 
   .movie-card a:hover {
     color: #f03514;
-    background-color: rgba(32, 139, 64, 0.3);
+    background-color: rgba(32, 139, 64, 1);
   }
 
   /* Responsive Adjustments */
