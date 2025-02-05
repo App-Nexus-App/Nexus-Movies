@@ -30,13 +30,13 @@
 
 .movie-card h2 {
   text-decoration: none;
-  color: white;  /* Change text color to white */
+  color: black;
   font-weight: bold;
   padding: 6px 10px;
+  
   border-radius: 5px;
-  background: none; /* Remove background */
+  
 }
-
   .movie-card a:hover {
     color: #f03514; 
   }
