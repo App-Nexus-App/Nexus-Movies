@@ -1,5 +1,5 @@
 import React from 'react';
-import './Movie-Grid.css';
+import './Movie-grid.css';
 import { useGlobalContext } from '../../MovieContext';
 import { Link } from 'react-router-dom';
 
