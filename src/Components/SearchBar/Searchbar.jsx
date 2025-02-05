@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './Searchbar.css';
+import './SearchBar.css';
 import { useGlobalContext } from '../../MovieContext';
 
 const SearchBar = () => {
