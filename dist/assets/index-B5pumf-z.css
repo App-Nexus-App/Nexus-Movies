@@ -233,6 +233,8 @@ button:focus-visible {
     background-color: #333;
     color: #fff;
     font-size: 16px;
+    background-color: rgba(82, 157, 167, .3);
+    color: black;
     border: 2px solid #ccc;
     border-color: #007bff;
     border-radius: 25px;
@@ -346,6 +348,7 @@ body {
 .movie-container img {
     width: 40%;
     max-width: 300px;
+    height: 400px;
     border-radius: 10px;
     transition: transform .3s ease-in-out
 }
@@ -396,25 +399,37 @@ p {
 
 .trailer iframe {
     width: 100%;
-    max-width: 560px;
+    max-width: 900px;
+    height: 450px;
     border-radius: 10px;
     box-shadow: 0 0 20px #ff000080
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+.home-button {
+    margin-left: 500px
+}
+
 .back-button,
 .home-button {
-    display: inline-block;
-    margin-bottom: 20px;
     padding: 10px 15px;
     background: linear-gradient(45deg, #000, #2575fc);
     color: silver;
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
     transition: background .3s, color .3s
 }
 
-.back-button:hover {
+.back-button:hover,
+.home-button:hover {
     background: linear-gradient(45deg, #111, #1b5ed6)
 }
 
