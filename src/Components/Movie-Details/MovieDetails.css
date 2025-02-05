@@ -48,11 +48,9 @@ body {
    font-size: 2rem;
    margin-top: 15px;
    font-style: italic;
-   background: linear-gradient(45deg, #1607ec, #000000);
+   background: transparent;
    background-clip: text;
    -webkit-background-clip: text;
-   color: transparent;
-   -webkit-text-fill-color: transparent;
  }
  
  p {
@@ -60,23 +58,19 @@ body {
    line-height: 1.6;
    opacity: 0.9;
    font-style: italic;
-   color: #25dcfc;
  }
  
  .rating {
   font-weight: bold;
-  color: #2196f3;
 }
 
  .release-date {
    font-weight: bold;
-   color: #ffcc00;
  }
  
  .trailer {
   margin-top: 20px;
   margin-bottom: 20px; /* Added space below trailer */
-  color: #0772ec;
   font-weight: bold;
  }
  
@@ -127,19 +121,10 @@ body {
 }
 }
 
-/* Additiona; Movie Info Styles */
-.movie-details .rating{
-   font-weight: bold;
-   color: #2196f3;
-   }
 
-/* Additiona; Movie Info Styles */
 .movie-details .rating{
    font-weight: bold;
-   color: #2196f3;
 }
-
-/* Hover effects */
 .movie-details img:hover{
    transform: scale(1.02);
    transition: transform 0.3s ease;
