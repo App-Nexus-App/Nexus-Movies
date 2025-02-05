@@ -35,20 +35,20 @@
 
 .movie-card h2 a {
   text-decoration: none;
-  color: #fbfbfc;
+  color: #66437e;
   font-weight: bold;
   display: block;
   padding: 6px 10px;
   transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   border: 0px solid #437e79;
   border-radius: 5px;
-  background-color: rgb(76, 159, 170);
+  background-color: rgba(82, 157, 167, 0.3);
 }
 
 
   .movie-card a:hover {
-    color: #fdfdfd;
-    background-color: rgb(32, 139, 64);
+    color: #f03514;
+    background-color: rgba(32, 139, 64, 0.3);
   }
 
   /* Responsive Adjustments */
