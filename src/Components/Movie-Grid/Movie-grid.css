@@ -9,16 +9,15 @@
 
 .movie-card {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   will-change: transform;
-  border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: rgba(215, 246, 250, 0.3);
+  background-color: var(--card-bg);
+  color: var(--card-text-color);
 }
-
 .movie-card:hover {
-  transform: scale(1.1);
+  transform: scale(var(--card-hover-scale));
   will-change: transform;
 }
 
@@ -31,11 +30,22 @@
 
 .movie-card h2 a {
   text-decoration: none;
-  color: white;
+  color: var(--card-text-color);
   font-weight: bold;
   padding: 6px 10px;
   border-radius: 5px;
   background: transparent;
+}
+
+:root {
+  --card-bg: rgba(40, 44, 52, 0.8);
+  --card-text-color: white;
+  --card-hover-scale: 1.1;
+}
+
+[data-theme="dark"] {
+  --card-bg: rgba(40, 44, 52, 0.8);
+  --card-text-color: white;
 }
 
 

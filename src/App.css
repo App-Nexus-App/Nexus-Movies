@@ -1,10 +1,11 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: auto ;
+  padding: auto;
   text-align: center;
 }
-
 
 .header h1 {
   align-items: center;
@@ -13,7 +14,7 @@
 }
 
 .app {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
   padding: 20px;
 }
@@ -59,3 +60,40 @@
 .theme-toggle:focus {
   outline: none;
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+html, body, #root, .app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
