@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">📚 Nexus-Movies is a React-based movie website that fetches and displays a list of movies using an external API. Users can browse movie posters and click on them to see details<br><br>
+<p align="left">📚 Nexus-Movies is a React-based movie website that fetches and displays a list of movies using an external API. Users can browse movie posters, click on them to see details, and experience a theme-switching feature between light and dark modes.<br><br>
 
 🎯 **Goals:** <br>Provide an intuitive and user-friendly interface for browsing movies.<br>Implement a responsive design for seamless experience on all devices.<br>Enhance user engagement through interactive elements.<br>Ensure efficient and optimized performance using React and Context API.<br>Allow users to personalize their experience with a theme toggle feature.<br>Facilitate easy navigation with React Router.<br><br>
 
