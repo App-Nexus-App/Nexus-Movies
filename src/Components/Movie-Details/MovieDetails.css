@@ -51,6 +51,7 @@ body {
    background: transparent;
    background-clip: text;
    -webkit-background-clip: text;
+   color: var(--card-text-color);
  }
  
  p {
@@ -147,4 +148,15 @@ body {
 }
 .movie-card h4 :hover {
   color: #f03514;
+}
+
+:root {
+  --card-bg: rgba(40, 44, 52, 0.8);
+  --card-text-color: white;
+  --card-hover-scale: 1.1;
+}
+
+[data-theme="dark"] {
+  --card-bg: rgba(40, 44, 52, 0.8);
+  --card-text-color: white;
 }
