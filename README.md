@@ -41,3 +41,20 @@
 </div>
 
 ###
+
+## **Clone repository**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/App-Nexus-App/Nexus-Movies.git
+
+## **Installing required packages**
+
+1. Node packages:
+   ```bash
+   npm install
+   npm install react-router-dom
+
+## **Run the project
+  ```bash
+  npm run dev
