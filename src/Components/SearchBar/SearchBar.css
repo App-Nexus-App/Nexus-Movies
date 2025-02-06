@@ -20,7 +20,7 @@
   background-color: #222;
   border-radius: 50px;
   padding: 5px;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   position: relative; 
 }
@@ -38,7 +38,7 @@
   border: none;
   border-radius: 50px;
   font-size: 16px;
-  background-color: black;
+  background-color: transparent;
   color: #fff;
   outline: none;
 }
@@ -61,17 +61,13 @@
   background-color: #333;
   color: #fff;
   font-size: 16px;
-
-  background-color: rgba(82, 157, 167, 0.3);
-  color: black;
   border: 2px solid #ccc;
-  border-color: #007bff; 
-  border-radius: 25px;
   cursor: pointer;
+  outline: none;
 }
 
 .genre-dropdown option {
-  background-color: black;
+  background-color: transparent;
   color: #fff;
 }
 
