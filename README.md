@@ -2,11 +2,11 @@
 
 ###
 
-<p align="left">📽️ Nexus-Movies</p>
+<p align="left">📽️ **NEXUS MOVIES** </p>
 
 ###
 
-<h2 align="left">About Us</h2>
+<h2 align="left">🎬 About Us</h2>
 
 ###
 
@@ -14,7 +14,7 @@
 
 🎯 **Goals:** <br>Provide an intuitive and user-friendly interface for browsing movies.<br>Implement a responsive design for seamless experience on all devices.<br>Enhance user engagement through interactive elements.<br>Ensure efficient and optimized performance using React and Context API.<br>Allow users to personalize their experience with a theme toggle feature.<br>Facilitate easy navigation with React Router.<br><br>
 
-🎲 **Fun fact**:<br>Did you know? The inspiration for Nexus-Movies came from the idea of making movie discovery as seamless and enjoyable as browsing your favorite streaming service, but with a focus on movie details and themes!<br><br>**Features**:<br>Movie Grid Display: Shows a grid of movie posters fetched from an external API.<br>Movie Details Page: Clicking on a movie redirects to a details page with more information.<br>Dark Mode Toggle: Users can switch between light and dark themes.<br>React Router Integration: Enables navigation between different pages.<br>Context API: Manages global state for movies and theme switching.<br><br>**Deployment** :<br>To deploy the app, you can use Rendser on this link : https://nexus-movies.onrender.com :<br><br>**Contributing** :<br>Fork the repository.<br>Create a new branch (feature/new-feature).<br>Commit your changes.<br>Push the branch and create a pull request.<br><br>**License**:<br>This project is licensed under the MIT License.<br><br>**Contact** :<br>For any inquiries, please contact [(https://github.com/App-Nexus-App/Nexus-Movies)].</p>
+🎲 **Fun fact**:<br>Did you know? The inspiration for Nexus-Movies came from the idea of making movie discovery as seamless and enjoyable as browsing your favorite streaming service, but with a focus on movie details and themes!<br><br>**>🔥 Key Features**:<br>🎞️ Movie Grid Display : Shows a grid of movie posters fetched from an external API.<br>🧐 Movie Details Page : Clicking on a movie redirects to a details page with more information.<br>Dark Mode Toggle: Users can switch between light and dark themes.<br>React Router Integration: Enables navigation between different pages.<br>Context API: Manages global state for movies and theme switching.<br><br>**🌍 Deployment** :<br>To deploy the app, you can use Rendser on this link : https://nexus-movies.onrender.com :<br><br>**Contributing** :<br>Fork the repository.<br>Create a new branch (feature/new-feature).<br>Commit your changes.<br>Push the branch and create a pull request.<br><br>**📜 License**:<br>This project is licensed under the MIT License.<br><br>**📩 Contact** :<br>For any inquiries, please contact [(https://github.com/App-Nexus-App/Nexus-Movies)].</p>
 
 ###
 
