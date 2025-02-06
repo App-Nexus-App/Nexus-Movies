@@ -137,12 +137,14 @@ body {
 }
 .movie-card h4 {
   text-decoration: none;
-  color: #66437e;
+  color: #ffffff;
   font-weight: bold;
   display: block;
   padding: 6px 10px;
   transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   border: 0px solid #437e79;
   border-radius: 5px;
-  background-color: rgba(82, 157, 167, 0.3);
+}
+.movie-card h4 :hover {
+  color: #f03514;
 }
