@@ -158,7 +158,7 @@ const MovieDetails = () => {
       {/* Suggested Movies by Same Actors */}
       {actorMovies.length > 0 && (
         <div className="suggested-movies">
-          <h3>🎭 More Movies Featuring {actorMovies[0]?.name}</h3>
+          <h3>You may also: {actorMovies[0]?.name}</h3>
           <div className="movies-grid">
             {actorMovies.map((actorMovie) => (
               <Link 
