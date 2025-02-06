@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">We are APP NEXUS</p>
+<p align="left">📽️ Nexus-Movies</p>
 
 ###
 
