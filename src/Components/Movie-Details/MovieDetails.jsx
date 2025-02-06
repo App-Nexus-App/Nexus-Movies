@@ -16,6 +16,7 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(true);
   const [trailer, setTrailer] = useState(null);
   const [actorMovies, setActorMovies] = useState([]);
+  
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -159,7 +160,7 @@ const MovieDetails = () => {
       {/* Suggested Movies by Same Actors */}
       {actorMovies.length > 0 && (
         <div className="suggested-movies">
-          <h3>You may also: {actorMovies[0]?.name}</h3>
+          <h2>You may also like: {actorMovies[0]?.name}</h2>
           <div className="movies-grid">
             {actorMovies.map((actorMovie) => (
               <Link 
