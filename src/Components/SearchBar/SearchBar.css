@@ -22,7 +22,7 @@
   padding: 5px;
   /* overflow: hidden; */
   width: 100%;
-  position: relative; /* Ensure relative positioning */
+  position: relative; 
 }
 
 .search-input-wrapper {
@@ -102,14 +102,14 @@
   border-radius: 10px;
   padding: 0;
   margin: 0;
-  z-index: 1000; /* Ensure this is higher than the movie grid */
+  z-index: 1000; 
 }
 
 .search-input-wrapper .autocomplete-list li {
   padding: 10px;
   cursor: pointer;
-  text-align: left; /* Align text to the left */
-  color: white; /* Ensure text is visible on black background */
+  text-align: left; 
+  color: white; 
 }
 
 .search-input-wrapper .autocomplete-list li:hover {
