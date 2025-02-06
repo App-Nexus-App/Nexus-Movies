@@ -22,6 +22,7 @@ function App() {
               <Route path="/search/:query" element={<SearchResults />} />
               <Route path="/search/genre/:genreId" element={<SearchResults />} />
             </Routes>
+            <Footer />
           </div>
         </Router>
       </MovieProvider>
@@ -39,6 +40,14 @@ const Header = () => {
         {theme === 'light' ? <i className=""></i> : <i className=""></i>}
       </button>
     </header>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Nexus Movies. All rights reserved.</p>
+    </footer>
   );
 };
 
