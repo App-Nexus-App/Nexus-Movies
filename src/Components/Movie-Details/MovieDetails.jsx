@@ -92,7 +92,7 @@ const MovieDetails = () => {
 
       {actorMovies.length > 0 && (
         <div className="suggested-movies">
-          <h3>🎭 More Movies with the Same Actors</h3>
+          <h3>You may also like</h3>
           <div className="movies-grid">
             {actorMovies.map((movie) => (
               <div key={movie.id} className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
