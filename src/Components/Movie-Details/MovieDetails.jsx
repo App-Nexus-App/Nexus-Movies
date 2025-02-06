@@ -154,13 +154,19 @@ const MovieDetails = () => {
         </div>
       </div>
 
+      
       {/* Suggested Movies by Same Actors */}
       {actorMovies.length > 0 && (
         <div className="suggested-movies">
-          <h3>You may also like: {actorMovies[0]?.name}</h3>
+          <h3>🎭 More Movies Featuring {actorMovies[0]?.name}</h3>
           <div className="movies-grid">
             {actorMovies.map((actorMovie) => (
-              <Link to={`/movie/${actorMovie.id}`} key={actorMovie.id} className="movie-card">
+              <Link 
+                to={`/movie/${actorMovie.id}`} 
+                key={actorMovie.id} 
+                className="movie-card"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top when clicking
+              >
                 <img
                   src={`https://image.tmdb.org/t/p/w200${actorMovie.poster_path}`}
                   alt={actorMovie.title}
