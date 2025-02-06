@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">📽️ ****NEXUS MOVIES**** </p>
+<p align="left">📽️ NEXUS MOVIES </p>
 
 ###
 
